@@ -16,12 +16,12 @@
       <div >
         <input type="text" value="" ng-model="wmp.nameIn" placeholder="Name">
         <input type="text" value="" ng-model="wmp.locationIn" placeholder="Location">
-        <button ng-click='wmp.newPeep()'>Add</button>
-        <button ng-click='wmp.whereMyPeepsAt()'>Read</button>
+        <button id="funBut" ng-click='wmp.newPeep()'>Add</button>
+        <button id="funBut" ng-click='wmp.whereMyPeepsAt()'>Read</button>
       </div>
       <div>
         <ul>
-          <li ng-repeat='x in wmp.peepArray'>{{x.name}}: {{x.location}}<button ng-click="wmp.deletePeep($index)">Delete</button></li>
+          <li ng-repeat='x in wmp.peepArray'>{{x.name}}: {{x.location}}<button id="funBut" ng-click="wmp.deletePeep($index)">Delete</button></li>
 
         </ul>
 

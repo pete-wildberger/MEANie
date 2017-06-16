@@ -4,24 +4,24 @@ a {
 }
 body {
   font-family: courier;
-  background-color: black;
+  background-color: #EEC8E0;
 }
 div {
   font-family: courier;
   margin-left: 3%;
 }
 h1 {
-  color: red;
+  color: #392F5A;
   font-family: arial;
   margin-left: 1%;
 }
 h2 {
-  color: red;
+  color: #392F5A;
   font-family: arial;
   margin-left: 2%;
 }
 h3 {
-  color: red;
+  color: #392F5A;
   font-family: arial;
   margin-left: 2%;
 }
@@ -33,5 +33,18 @@ p {
   margin-left: 5%;
 }
 li{
-  color: white;
+  color: #A8C7BB;
+}
+#funBut{
+  background-color: #FFAFF0;
+  border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+}
+#funBut:hover{
+  background-color: #F092DD;
 }
