@@ -10,14 +10,19 @@
   </head>
   <body ng-app="myApp">
     <img src='images/meanie_4.jpg' width=40% style='float: left;margin: 9px;'/>
-    <div>
+    <div ng-controller="WhereMyPeeps as wmp">
       <h1>MEANie</h1>
       <p>Where my Peeps?</p>
-      <div ng-controller="WhereMyPeeps as wmp">
-        <input type="text" value="" ng-model="nameIn" placeholder="Name">
+      <div >
+        <input type="text" value="" ng-model="wmp.nameIn" placeholder="Name">
         <input type="text" value="" ng-model="wmp.locationIn" placeholder="Location">
         <button ng-click='wmp.newPeep()'>Add</button>
         <button ng-click='wmp.whereMyPeepsAt()'>Read</button>
+      </div>
+      <div>
+        <ul>
+          <li ng-repeat='x in wmp.peepArray'>{{x.name}}: {{x.location}}</li>
+        </ul>
       </div>
     </div>
   </body>
