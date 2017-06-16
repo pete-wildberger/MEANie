@@ -21,7 +21,7 @@
       </div>
       <div>
         <ul>
-          <li ng-repeat='x in wmp.peepArray'>{{x.name}}: {{x.location}}<button>Delete</button></li>
+          <li ng-repeat='x in wmp.peepArray'>{{x.name}}: {{x.location}}<button ng-click="wmp.deletePeep($index)">Delete</button></li>
 
         </ul>
 

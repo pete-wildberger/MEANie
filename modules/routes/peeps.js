@@ -17,13 +17,14 @@ router.use(bodyParser.json());
 
 router.get('/', function(req, res) {
   // get and send back all the things
+  console.log('get peeps db');
   peepsModel.find().then(function(data) {
     res.send(data);
   });
 });
 
 router.post('/', function(req, res) {
-  console.log('req.body.name: ' + req.body.name);
+  console.log('db req.body.name: ' + req.body.name);
   // retrieved the req.body
   // putting it into an object to be saved in the db
   var recordToAdd = {
@@ -34,5 +35,18 @@ router.post('/', function(req, res) {
   var newRecord = peepsModel(recordToAdd);
   newRecord.save();
 });
+router.delete('/:id', function(req, res) {
+
+  console.log('db in delete' );
+  peepsModel.remove({_id:req.params.id}, function(err) {
+    if (!err) {
+           res.send('No Erro!');
+   }
+   else {
+           res.send('error');
+   }
+  });
+});
+
 
 module.exports = router;

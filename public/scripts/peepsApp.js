@@ -10,6 +10,7 @@ myApp.controller('WhereMyPeeps', function(PeepsService) {
       location: vm.locationIn
     }; //end peepToAdd
     PeepsService.addPeep(peepToAdd);
+    vm.whereMyPeepsAt();
   }; //end whereMyPeepsAt
 
   vm.whereMyPeepsAt = function() {
@@ -21,4 +22,11 @@ myApp.controller('WhereMyPeeps', function(PeepsService) {
       console.log(vm.peepArray);
     });
   }; //end whereMyPeepsAt
+  vm.deletePeep = function(index){
+    var id = vm.peepArray[index]._id;
+    PeepsService.peepDelete(id);
+      vm.whereMyPeepsAt();
+
+  };
+
 }); // end controller
